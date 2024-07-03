@@ -50,7 +50,7 @@ const Dashboard = () => {
           justifyContent="center"
           style={{
             minWidth: "200px",
-            marginBottom: "20px",
+            marginBottom: "5px",
             padding: "20px 10px",
           }}
         >
@@ -74,7 +74,7 @@ const Dashboard = () => {
           justifyContent="center"
           style={{
             minWidth: "200px",
-            marginBottom: "20px",
+            marginBottom: "5px",
             padding: "20px 10px",
           }}
         >
@@ -98,7 +98,7 @@ const Dashboard = () => {
           justifyContent="center"
           style={{
             minWidth: "200px",
-            marginBottom: "20px",
+            marginBottom: "5px",
             padding: "20px 10px",
           }}
         >
@@ -122,7 +122,7 @@ const Dashboard = () => {
           justifyContent="center"
           style={{
             minWidth: "200px",
-            marginBottom: "20px",
+            marginBottom: "5px",
             padding: "20px 10px",
           }}
         >
@@ -145,6 +145,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           style={{ padding: "10px 5px" }}
+          // mb={"20px"}
         >
           <Box
             mt="25px"
@@ -235,6 +236,7 @@ const Dashboard = () => {
         {/* ROW 3 */}
         <Box
           gridColumn="span 4"
+          mt={1}
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
@@ -260,6 +262,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
+          mt={1}
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
@@ -276,6 +279,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         <Box
+          mt={1}
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
