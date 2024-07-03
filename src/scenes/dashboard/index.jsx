@@ -33,19 +33,14 @@ const Dashboard = () => {
               padding: "10px 20px",
             }}
           >
-            <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
+            <DownloadOutlinedIcon sx={{ mr: "0px" }} />
+            {window.innerWidth < 768 ? null : "  Download Reports"}
           </Button>
         </Box>
       </Box>
 
       {/* GRID & CHARTS */}
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
-        gap="20px"
-      >
+      <div className="dashboard-grid">
         {/* ROW 1 */}
         <Box
           gridColumn="span 3"
@@ -53,6 +48,11 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          style={{
+            minWidth: "200px",
+            marginBottom: "20px",
+            padding: "20px 10px",
+          }}
         >
           <StatBox
             title="12,361"
@@ -72,6 +72,11 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          style={{
+            minWidth: "200px",
+            marginBottom: "20px",
+            padding: "20px 10px",
+          }}
         >
           <StatBox
             title="431,225"
@@ -91,6 +96,11 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          style={{
+            minWidth: "200px",
+            marginBottom: "20px",
+            padding: "20px 10px",
+          }}
         >
           <StatBox
             title="32,441"
@@ -110,6 +120,11 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          style={{
+            minWidth: "200px",
+            marginBottom: "20px",
+            padding: "20px 10px",
+          }}
         >
           <StatBox
             title="1,325,134"
@@ -129,6 +144,7 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          style={{ padding: "10px 5px" }}
         >
           <Box
             mt="25px"
@@ -276,7 +292,7 @@ const Dashboard = () => {
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>
-      </Box>
+      </div>
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -41,6 +41,12 @@ const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsCollapsed(true);
+    }
+  }, []);
+
   return (
     <Box
       sx={{
@@ -65,10 +71,13 @@ const Sidebar = () => {
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
-            onClick={() => setIsCollapsed(!isCollapsed)}
+            onClick={() => {
+              setIsCollapsed(!isCollapsed);
+            }}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
+              display: window.innerWidth < 768 ? "none" : "block",
               color: colors.grey[100],
             }}
           >
